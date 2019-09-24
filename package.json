@@ -1,0 +1,43 @@
+{
+  "name": "cometchat-components",
+  "version": "0.0.1-beta",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --port 3030 --https true --host localhost",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cometchat-pro/chat": "^2.0.0-beta4",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel": "^6.23.0",
+    "babel-preset-react-native": "^4.0.1",
+    "css-modules-typescript-loader": "^3.0.1",
+    "dts-bundle-webpack": "^1.0.2",
+    "editable-sources-webpack-plugin": "^1.0.2",
+    "strip-comments": "^1.0.2",
+    "typed-css-modules-loader": "0.0.17",
+    "webpack-comment-remover-loader": "0.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "css-loader": "^3.2.0",
+    "exports-loader": "^0.7.0",
+    "expose-loader": "^0.7.5",
+    "jasmine": "^3.3.1",
+    "style-loader": "^1.0.0",
+    "ts-loader": "4.5.0",
+    "typescript": "^3.2.1",
+    "typings-for-css-modules-loader": "^1.7.0",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
