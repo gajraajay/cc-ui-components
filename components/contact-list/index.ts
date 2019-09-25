@@ -32,11 +32,7 @@ export class CometChatContactList extends HTMLElement {
             })
         } else {
             console.log("Yes I am called1241");
-        }
-
-        this.addEventListener('click', e => {
-            console.log("click", { e });
-        });
+        }    
     }
 
     connectedCallback() {

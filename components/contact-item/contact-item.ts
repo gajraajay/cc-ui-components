@@ -11,6 +11,9 @@ export class ContactItem extends HTMLElement {
 
     constructor() {
         super();
+        this.addEventListener('click', e => {
+            console.log("clicked me ",this.getAttribute('uid'))
+        });
     }
 
     connectedCallback() {
@@ -32,7 +35,7 @@ export class ContactItem extends HTMLElement {
             div.classList.add(css['contact-item']);
         }
 
-        if (attrName == "name" || attrName == "email" || attrName == "avatar") {
+        if (attrName == "name" || attrName == "email" || attrName == "avatar" || attrName=="uid") {
             let divInner: HTMLElement | any;
             if (this.childNodes[0].childNodes.length == 0) {
                 console.log("if")
@@ -77,7 +80,7 @@ export class ContactItem extends HTMLElement {
 
 
         if (attrName == "uid") {
-
+            div.setAttribute("id",newVal);
         }
 
 
