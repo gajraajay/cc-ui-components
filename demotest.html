@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="https://unpkg.com/@cometchat-pro/chat@1.6.0/CometChat.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+        window.onload = function () {
+            var appID = "88411105ac3f1f";
+            // var appSetting = new CometChat.AppSettingsBuilder().subscribePresenceForAllUsers().setRegion('us').build();
+            CometChat.init(appID).then(
+                () => {
+                    console.log("Initialization completed successfully");
+                    var UID = "SUPERHERO1";
+                    var apiKey = "02e79976dabd15032a6c557dd630767d566a5a6d";
+
+                    CometChat.login(UID, apiKey).then(
+                        user => {
+                            let usersRequest = new CometChat.UsersRequestBuilder().setLimit(1).build();
+                            console.log("Login Successful:", { user });
+                            usersRequest.fetchNext().then(
+                                userList => {
+                                    /* userList will be the list of User class. */
+                                    console.log("User list received:", userList);
+                                    usersRequest.fetchNext().then(
+                                        userList => {
+                                            /* userList will be the list of User class. */
+                                            console.log("User list received:", userList);
+                                            usersRequest.fetchNext().then(
+                                                userList => {
+                                                    /* userList will be the list of User class. */
+                                                    console.log("User list received:", userList);
+                                                },
+                                                error => {
+                                                    console.log("User list fetching failed with error:", error);
+                                                }
+                                            );
+                                        },
+                                        error => {
+                                            console.log("User list fetching failed with error:", error);
+                                        }
+                                    );
+
+                                },
+                                error => {
+                                    console.log("User list fetching failed with error:", error);
+                                }
+                            );
+
+                        },
+                        error => {
+                            console.log("Login failed with exception:", { error });
+                        }
+                    );
+                },
+                error => {
+                    console.log("Initialization failed with error:", error);
+                    // Check the reason for error and take appropriate action.
+                }
+            );
+
+        }    
+    </script>
+</body>
+
+
+
+</html>

@@ -1,5 +1,8 @@
 .cc-avatar-round{
     border-radius: 50%;
+    background: #554433;
+    border:solid 1.5px  white;    
+    margin:5px;
 }
 .cc-avatar-square{
   border-radius: 5%;

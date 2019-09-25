@@ -22,7 +22,7 @@ export class CometChatContactList extends HTMLElement {
                 users.map(user=>{
                     let cometchat_contact_item=document.createElement("cometchat-contact-item")
                     Object.keys(user).map(key=>{
-                        cometchat_contact_item.setAttribute(key,user[key]); 
+                        cometchat_contact_item.setAttribute(key,user[key]);                         
                     });                    
                     this.appendChild(cometchat_contact_item); 
                 })

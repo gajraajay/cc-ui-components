@@ -1,0 +1,33 @@
+.contact-item > .contact-info ,.contact-item>cometchat-avatar{
+    vertical-align: middle;
+}
+.small{    
+}
+.contact-name{
+    color: 333;
+    margin-top: 0px;
+    display: block;
+    top: 0.4em;
+    position: relative;  
+    font-size:14px;  
+}
+.contact-email  {
+    color: grey;
+    margin-top: 0px;
+    display: block;
+    top: 0em;
+    position: relative;
+    font-size:12px;
+}
+.contact-item > cometchat-avatar{    
+    display: table-cell;
+    vertical-align: middle;
+}
+.contact-item{    
+    margin: 3px;
+    width: 100%;
+    max-width: 100%;
+}
+.contact-info{
+    display: table-cell
+}
