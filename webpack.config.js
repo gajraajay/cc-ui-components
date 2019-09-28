@@ -5,6 +5,7 @@ const strip = require('strip-comments');
 const EditableSourcesWebpackPlugin = require('editable-sources-webpack-plugin');
 const DtsBundleWebpack = require('dts-bundle-webpack');
 
+const MediaQueryPlugin = require('media-query-plugin');
 module.exports = function (env, argv) {
   return {
     entry: {
@@ -27,10 +28,12 @@ module.exports = function (env, argv) {
           test: /\.css$/,
           use: [
             {
-              loader: 'style-loader'
+              loader:"style-loader"
             },
             {
-              loader: "css-loader", options: { modules: true }
+              loader:"css-loader", options: { modules: true }
+            },{
+              loader:MediaQueryPlugin.loader
             }
           ]
         }

@@ -7,9 +7,8 @@ CometChat.init(appID, appSetting).then(
     () => {
         console.log("Initialization completed successfully");
 
-        var UID = "superhero1";
+        var UID = "superhero2";
         var apiKey = "ae06b86015923a99d40abcddde0e622f23d284e1";
-
 
         CometChat.login(UID, apiKey).then(
             user => {
@@ -32,8 +31,7 @@ export function isIntialized() {
     return CometChat.isInitialized();
 }
 
-export class UserManager {
-    limi
+export class UserManager {    
     usersRequest = null;
     
     constructor(object) {
